@@ -1,0 +1,124 @@
+/* Default Reset  */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Main Body  */
+body{
+    font-family: cursive;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to right , #1e90ff , #037af170);
+}
+
+/* Heading  */
+.heading{
+    font-size: 4rem;
+    margin: 1rem 0 2.5rem 0;
+    color: red;
+    text-shadow: 0px 0px 5px gray , 0px 0px 10px gray , 0px 0px 15px gray , 0px 0px 20px rgb(194, 180, 180) , 0px 0px 25px rgb(160, 132, 132);
+}
+
+/* Adding Todos  */
+.add-container{
+    background-color: purple;
+    border-radius: 3rem;
+    width: 500px;
+    display: flex;
+    padding: 1rem;
+}
+.input , .add-btn{
+    outline: none;
+    border: none;
+    font-size: 1.2rem;
+    background: inherit;
+    padding: 10px;
+    color: white;
+}
+.input{
+   /* -webkit-text-fill-color: rgb(226, 195, 195); */
+    width: 100%;
+}
+.add-btn{
+    cursor: pointer;
+}
+.add-btn:hover{
+    color: red;
+    transform: scale(1.3);
+}
+
+/* Todo List Display Container  */
+.todo-list{
+    margin-top: 2rem;
+    width: 500px;
+    padding: 1rem;
+}
+
+.todos{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: white;
+    margin-bottom: 5px;
+    transition: all 0.5s ease;
+}
+.items{
+    width: 80%;
+    word-wrap: break-word;
+}
+
+.check-icon , .dustbin-icon{
+    padding: 10px;
+    background-color: green;
+    color: white;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+.dustbin-icon{
+    background-color: red;
+    margin-left: 5px;
+}
+.check-icon:hover{
+    background-color: rgb(4, 63, 4);
+}
+.dustbin-icon:hover{
+    background-color: rgb(153, 4, 4);
+}
+
+/* Clear All Todos  */
+.clear-btn{
+    border: none;
+    outline: none;
+    background-color: rgb(32, 17, 238);
+    color: white;
+    padding: 0.5rem 1rem; 
+    font-size: 25px;
+    position: fixed;
+    right: 1rem;
+    top: 1rem;
+    cursor: pointer;
+    width: 8rem;
+    height: 3rem;
+}
+.btn-hover{
+    display: grid;
+    place-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: red;
+    z-index: -1;
+    transition: all 0.3s ease;
+}
+.clear-btn:hover  .btn-hover{
+    width: 100%;
+}
